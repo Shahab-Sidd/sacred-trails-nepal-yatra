@@ -9,9 +9,11 @@ const Navbar = () => {
     <nav className="bg-white shadow-sm sticky top-0 z-50">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <div className="flex items-center space-x-2">
-          <h1 className="text-2xl font-bold text-deep-blue">
-            Holy<span className="text-saffron">Nepal</span>Yatra
-          </h1>
+          <img 
+            src="/lovable-uploads/11bacaa7-0ff8-4c81-96c0-d3c8916b197c.png" 
+            alt="HolyNepalYatra Logo" 
+            className="h-12"
+          />
         </div>
         
         <div className="hidden md:flex items-center space-x-8">

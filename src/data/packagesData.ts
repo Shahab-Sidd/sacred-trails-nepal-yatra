@@ -80,7 +80,7 @@ export const packagesData: PackageProps[] = [
   {
     id: 4,
     title: "9-Day Grand Nepal Spiritual Journey",
-    image: "https://images.unsplash.com/photo-1544015759-1e25b35148bd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
     duration: "9 Days",
     destinations: ["Kathmandu", "Pokhara", "Lumbini", "Muktinath", "Chitwan"],
     highlights: [
@@ -105,7 +105,7 @@ export const packagesData: PackageProps[] = [
   {
     id: 5,
     title: "6-Day Muktinath Helicopter Darshan",
-    image: "https://images.unsplash.com/photo-1516690553959-71a414d6b9b8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    image: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
     duration: "6 Days",
     destinations: ["Kathmandu", "Pokhara", "Muktinath", "Jomsom"],
     highlights: [

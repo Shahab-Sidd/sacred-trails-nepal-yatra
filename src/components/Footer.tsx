@@ -1,4 +1,3 @@
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   
@@ -7,9 +6,13 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-xl font-bold mb-4">
-              Holy<span className="text-saffron">Nepal</span>Yatra
-            </h3>
+            <div className="mb-4">
+              <img 
+                src="/lovable-uploads/11bacaa7-0ff8-4c81-96c0-d3c8916b197c.png" 
+                alt="HolyNepalYatra Logo" 
+                className="h-16"
+              />
+            </div>
             <p className="text-white/80 mb-4">
               Spiritual Journeys, Sacred Memories. 
               Crafting divine pilgrimages since 2002.
