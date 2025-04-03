@@ -80,25 +80,25 @@ const AboutUs = () => {
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-4">
               <img 
-                src="https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80" 
-                alt="Pilgrims at temple" 
+                src="https://images.unsplash.com/photo-1533130061792-64b345e4a833?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80" 
+                alt="Pashupatinath Temple in Kathmandu" 
                 className="w-full h-48 md:h-64 object-cover rounded-lg shadow-md"
               />
               <img 
-                src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80" 
-                alt="Mountain view" 
+                src="https://images.unsplash.com/photo-1534800891164-a1d96b5114e7?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80" 
+                alt="Prayer flags in Himalayan mountains" 
                 className="w-full h-40 md:h-48 object-cover rounded-lg shadow-md"
               />
             </div>
             <div className="space-y-4 mt-6">
               <img 
-                src="https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80" 
-                alt="River between mountains" 
+                src="https://images.unsplash.com/photo-1516690553959-71a414d6b9b8?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80" 
+                alt="Traditional Nepali shrine" 
                 className="w-full h-40 md:h-48 object-cover rounded-lg shadow-md"
               />
               <img 
-                src="https://images.unsplash.com/photo-1426604966848-d7adac402bff?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80" 
-                alt="Temple in mountains" 
+                src="https://images.unsplash.com/photo-1542359649-31e03cd4d909?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80" 
+                alt="Stupa in Nepal" 
                 className="w-full h-48 md:h-64 object-cover rounded-lg shadow-md"
               />
             </div>

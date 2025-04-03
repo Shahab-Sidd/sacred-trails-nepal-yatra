@@ -6,7 +6,7 @@ const packagesData: PackageProps[] = [
   {
     id: 1,
     title: "5-Day Sacred Trail: Kathmandu → Pokhara → Muktinath",
-    image: "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    image: "https://images.unsplash.com/photo-1605640840605-14ac1855827b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
     duration: "5 Days",
     destinations: ["Kathmandu", "Pokhara", "Muktinath"],
     highlights: [
@@ -31,7 +31,7 @@ const packagesData: PackageProps[] = [
   {
     id: 2,
     title: "7-Day Complete Nepal Pilgrimage",
-    image: "https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    image: "https://images.unsplash.com/photo-1542359649-31e03cd4d909?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
     duration: "7 Days",
     destinations: ["Kathmandu", "Pokhara", "Lumbini", "Muktinath"],
     highlights: [
@@ -56,7 +56,7 @@ const packagesData: PackageProps[] = [
   {
     id: 3,
     title: "4-Day Kathmandu Valley Sacred Tour",
-    image: "https://images.unsplash.com/photo-1426604966848-d7adac402bff?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    image: "https://images.unsplash.com/photo-1533130061792-64b345e4a833?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
     duration: "4 Days",
     destinations: ["Kathmandu", "Bhaktapur", "Patan"],
     highlights: [
@@ -81,7 +81,7 @@ const packagesData: PackageProps[] = [
   {
     id: 4,
     title: "9-Day Grand Nepal Spiritual Journey",
-    image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    image: "https://images.unsplash.com/photo-1544015759-1e25b35148bd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
     duration: "9 Days",
     destinations: ["Kathmandu", "Pokhara", "Lumbini", "Muktinath", "Chitwan"],
     highlights: [
@@ -106,7 +106,7 @@ const packagesData: PackageProps[] = [
   {
     id: 5,
     title: "6-Day Muktinath Helicopter Darshan",
-    image: "https://images.unsplash.com/photo-1501854140801-50d01698950b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    image: "https://images.unsplash.com/photo-1516690553959-71a414d6b9b8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
     duration: "6 Days",
     destinations: ["Kathmandu", "Pokhara", "Muktinath", "Jomsom"],
     highlights: [
@@ -131,7 +131,7 @@ const packagesData: PackageProps[] = [
   {
     id: 6,
     title: "8-Day Nepal Family Pilgrimage",
-    image: "https://images.unsplash.com/photo-1472396961693-142e6e269027?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    image: "https://images.unsplash.com/photo-1534800891164-a1d96b5114e7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
     duration: "8 Days",
     destinations: ["Kathmandu", "Nagarkot", "Pokhara", "Muktinath"],
     highlights: [

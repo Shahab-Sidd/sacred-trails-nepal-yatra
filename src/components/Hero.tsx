@@ -5,17 +5,17 @@ const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slides = [
     {
-      image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80",
+      image: "https://images.unsplash.com/photo-1605640840605-14ac1855827b?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80",
       title: "Discover Sacred Nepal",
       description: "Journey to the Abode of the Divine – Let Us Guide You."
     },
     {
-      image: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80",
+      image: "https://images.unsplash.com/photo-1533130061792-64b345e4a833?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80",
       title: "Spiritual Journeys",
       description: "Custom Pilgrimages Crafted with Devotion Since 2002."
     },
     {
-      image: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80",
+      image: "https://images.unsplash.com/photo-1542359649-31e03cd4d909?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80",
       title: "Sacred Memories",
       description: "Experience the Blessings of Muktinath and Beyond."
     },
