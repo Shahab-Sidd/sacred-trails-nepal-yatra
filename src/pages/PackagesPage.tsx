@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 import PackagesGrid from "../components/PackagesGrid";
 import { packagesData, filterPackages } from "../data/packagesData";
 import { PackageProps } from "../components/PackageCard";
-import PackageSearch from "../components/PackageSearch";
+import CommandSearch from "../components/CommandSearch";
 
 const PackagesPage = () => {
   const [searchParams] = useSearchParams();
@@ -30,7 +30,7 @@ const PackagesPage = () => {
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <div className="sticky top-0 z-40 bg-white shadow-md">
-        <PackageSearch />
+        <CommandSearch />
       </div>
       
       <section className="py-8 px-4 bg-gray-50 flex-1">
