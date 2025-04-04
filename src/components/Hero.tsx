@@ -10,12 +10,12 @@ const Hero = () => {
       description: "Journey to the Abode of the Divine – Let Us Guide You."
     },
     {
-      image: "https://images.unsplash.com/photo-1533130061792-64b345e4a833?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80",
+      image: "https://images.unsplash.com/photo-1516690553959-71a414d6b9b8?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80",
       title: "Spiritual Journeys",
       description: "Custom Pilgrimages Crafted with Devotion Since 2002."
     },
     {
-      image: "https://images.unsplash.com/photo-1542359649-31e03cd4d909?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80",
+      image: "https://images.unsplash.com/photo-1535622380377-92b1fc687a6d?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80",
       title: "Sacred Memories",
       description: "Experience the Blessings of Muktinath and Beyond."
     },

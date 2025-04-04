@@ -83,11 +83,17 @@ const AboutUs = () => {
                 src="https://images.unsplash.com/photo-1533130061792-64b345e4a833?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80" 
                 alt="Pashupatinath Temple in Kathmandu" 
                 className="w-full h-48 md:h-64 object-cover rounded-lg shadow-md"
+                onError={(e) => {
+                  e.currentTarget.src = "https://images.unsplash.com/photo-1605640840605-14ac1855827b?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80";
+                }}
               />
               <img 
-                src="https://images.unsplash.com/photo-1534800891164-a1d96b5114e7?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80" 
+                src="https://images.unsplash.com/photo-1535622380377-92b1fc687a6d?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80" 
                 alt="Prayer flags in Himalayan mountains" 
                 className="w-full h-40 md:h-48 object-cover rounded-lg shadow-md"
+                onError={(e) => {
+                  e.currentTarget.src = "https://images.unsplash.com/photo-1509710366487-3f9980ef6089?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80";
+                }}
               />
             </div>
             <div className="space-y-4 mt-6">
@@ -95,11 +101,17 @@ const AboutUs = () => {
                 src="https://images.unsplash.com/photo-1516690553959-71a414d6b9b8?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80" 
                 alt="Traditional Nepali shrine" 
                 className="w-full h-40 md:h-48 object-cover rounded-lg shadow-md"
+                onError={(e) => {
+                  e.currentTarget.src = "https://images.unsplash.com/photo-1605640840605-14ac1855827b?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80";
+                }}
               />
               <img 
                 src="https://images.unsplash.com/photo-1542359649-31e03cd4d909?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80" 
                 alt="Stupa in Nepal" 
                 className="w-full h-48 md:h-64 object-cover rounded-lg shadow-md"
+                onError={(e) => {
+                  e.currentTarget.src = "https://images.unsplash.com/photo-1561361058-c24abbaf669c?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80";
+                }}
               />
             </div>
           </div>

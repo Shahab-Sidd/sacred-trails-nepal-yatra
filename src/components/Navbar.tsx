@@ -14,7 +14,10 @@ const Navbar = () => {
             src="/lovable-uploads/11bacaa7-0ff8-4c81-96c0-d3c8916b197c.png" 
             alt="HolyNepalYatra Logo" 
             className="h-12"
-            style={{ filter: 'drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.2))' }}
+            style={{ 
+              filter: 'drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.2))',
+              mixBlendMode: 'multiply' // This helps with removing white backgrounds
+            }}
           />
         </Link>
         

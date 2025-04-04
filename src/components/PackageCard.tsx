@@ -39,6 +39,10 @@ const PackageCard = ({
     navigate(`/package/${id}`);
   };
 
+  const handleImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
+    e.currentTarget.src = "https://images.unsplash.com/photo-1605640840605-14ac1855827b?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80";
+  };
+
   return (
     <div className="package-card flex flex-col h-full">
       <div className="relative h-60 cursor-pointer" onClick={handleViewDetails}>
@@ -46,6 +50,7 @@ const PackageCard = ({
           src={image}
           alt={title}
           className="w-full h-full object-cover"
+          onError={handleImageError}
         />
         <div className="absolute top-4 left-4 bg-secondary text-black px-3 py-1 rounded-full text-sm font-medium">
           {duration}

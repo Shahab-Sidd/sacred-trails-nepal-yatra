@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { packagesData } from "../data/packagesData";
@@ -56,13 +55,47 @@ const PackageDetail = () => {
     );
   }
 
-  // Generate sample images for the gallery that match the destinations
-  const galleryImages = [
-    packageData.image,
-    "https://images.unsplash.com/photo-1558799625-5ca4d941b5f9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80", // Kathmandu
-    "https://images.unsplash.com/photo-1554586916-7d702d6529ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80", // Pokhara
-    "https://images.unsplash.com/photo-1584378909319-db39924f3268?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80", // Muktinath
-  ];
+  const getDestinationImages = (destinations: string[]) => {
+    const imageMap: Record<string, string> = {
+      'Kathmandu': "https://images.unsplash.com/photo-1558799625-5ca4d941b5f9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      'Pokhara': "https://images.unsplash.com/photo-1554586916-7d702d6529ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      'Muktinath': "https://images.unsplash.com/photo-1561361058-c24abbaf669c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      'Lumbini': "https://images.unsplash.com/photo-1625371291802-56960726cf27?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      'Jomsom': "https://images.unsplash.com/photo-1509710366487-3f9980ef6089?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      'Pashupatinath': "https://images.unsplash.com/photo-1566466477907-34f79b07b00a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      'Janakpur': "https://images.unsplash.com/photo-1605640840605-14ac1855827b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+    };
+    
+    const destinationImages = destinations.map(dest => 
+      imageMap[dest] || "https://images.unsplash.com/photo-1605640840605-14ac1855827b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+    );
+    
+    const galleryImages = [packageData?.image || ""];
+    
+    destinationImages.forEach(img => {
+      if (!galleryImages.includes(img)) {
+        galleryImages.push(img);
+      }
+    });
+    
+    const fallbackImages = [
+      "https://images.unsplash.com/photo-1605640840605-14ac1855827b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      "https://images.unsplash.com/photo-1533130061792-64b345e4a833?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      "https://images.unsplash.com/photo-1535622380377-92b1fc687a6d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+    ];
+    
+    let i = 0;
+    while (galleryImages.length < 4 && i < fallbackImages.length) {
+      if (!galleryImages.includes(fallbackImages[i])) {
+        galleryImages.push(fallbackImages[i]);
+      }
+      i++;
+    }
+    
+    return galleryImages;
+  };
+
+  const galleryImages = getDestinationImages(packageData.destinations);
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -77,7 +110,6 @@ const PackageDetail = () => {
         </button>
         
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Main content */}
           <div className="lg:col-span-2">
             <h1 className="text-3xl md:text-4xl font-bold text-deep-blue mb-4">
               {packageData.title}
@@ -94,7 +126,6 @@ const PackageDetail = () => {
               </div>
             </div>
             
-            {/* Image gallery carousel */}
             <div className="mb-8">
               <Carousel className="w-full">
                 <CarouselContent>
@@ -105,6 +136,9 @@ const PackageDetail = () => {
                           src={img} 
                           alt={`${packageData.title} - Image ${index + 1}`}
                           className="w-full h-full object-cover"
+                          onError={(e) => {
+                            e.currentTarget.src = "https://images.unsplash.com/photo-1605640840605-14ac1855827b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80";
+                          }}
                         />
                       </div>
                     </CarouselItem>
@@ -115,7 +149,6 @@ const PackageDetail = () => {
               </Carousel>
             </div>
             
-            {/* Package description */}
             <div className="mb-8">
               <h2 className="text-2xl font-bold mb-4 text-deep-blue">Description</h2>
               <p className="text-gray-700 mb-4">
@@ -132,15 +165,12 @@ const PackageDetail = () => {
               </p>
             </div>
             
-            {/* Add the map component */}
             <PackageMap destinations={packageData.destinations} />
             
-            {/* Add the day-wise itinerary if available */}
             {packageData.itinerary && 
               <DayWiseItinerary itinerary={packageData.itinerary} />
             }
             
-            {/* Highlights */}
             <div className="mb-8">
               <h2 className="text-2xl font-bold mb-4 text-deep-blue">Package Highlights</h2>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -155,7 +185,6 @@ const PackageDetail = () => {
               </ul>
             </div>
             
-            {/* Inclusions & Exclusions */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
                 <h2 className="text-2xl font-bold mb-4 text-deep-blue">Inclusions</h2>
@@ -183,7 +212,6 @@ const PackageDetail = () => {
             </div>
           </div>
           
-          {/* Sidebar */}
           <div className="lg:col-span-1">
             <div className="bg-gray-50 p-6 rounded-xl sticky top-24">
               <h3 className="text-xl font-bold mb-4 text-deep-blue">Book this Package</h3>

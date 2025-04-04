@@ -11,7 +11,6 @@ const PackageMap = ({ destinations }: PackageMapProps) => {
   
   useEffect(() => {
     // For demonstration, we're using a static map approach
-    // In a production app, you'd integrate with a mapping service API
     const loadMap = async () => {
       if (!mapRef.current) return;
       
@@ -23,10 +22,14 @@ const PackageMap = ({ destinations }: PackageMapProps) => {
       const mapDiv = document.createElement('div');
       mapDiv.className = 'relative h-full w-full bg-gray-100 rounded-lg overflow-hidden';
       
-      // Add Nepal outline background
+      // Add Nepal outline background (using a reliable image)
       const bgImg = document.createElement('img');
       bgImg.src = 'https://images.unsplash.com/photo-1533130061792-64b345e4a833?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80';
       bgImg.className = 'w-full h-full object-cover opacity-30';
+      bgImg.onerror = () => {
+        // Fallback if the image fails to load
+        bgImg.src = 'https://images.unsplash.com/photo-1605640840605-14ac1855827b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80';
+      };
       mapDiv.appendChild(bgImg);
       
       // Predefined coordinates for common destinations in Nepal (for demonstration)
@@ -39,7 +42,9 @@ const PackageMap = ({ destinations }: PackageMapProps) => {
         'Nagarkot': { top: '40%', left: '60%' },
         'Bhaktapur': { top: '47%', left: '58%' },
         'Patan': { top: '48%', left: '54%' },
-        'Jomsom': { top: '20%', left: '25%' }
+        'Jomsom': { top: '20%', left: '25%' },
+        'Pashupatinath': { top: '46%', left: '56%' },
+        'Janakpur': { top: '60%', left: '65%' }
       };
       
       // Add pins for each destination

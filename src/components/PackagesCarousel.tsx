@@ -54,6 +54,11 @@ const PackagesCarousel = ({ packages }: PackagesCarouselProps) => {
     return null;
   }
 
+  // Fallback image if the package image fails to load
+  const handleImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
+    e.currentTarget.src = "https://images.unsplash.com/photo-1605640840605-14ac1855827b?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80";
+  };
+
   return (
     <div className="relative w-full h-[400px] overflow-hidden rounded-xl">
       {/* Carousel controls */}
@@ -83,6 +88,7 @@ const PackagesCarousel = ({ packages }: PackagesCarouselProps) => {
               src={pkg.image} 
               alt={pkg.title}
               className="w-full h-full object-cover"
+              onError={handleImageError}
             />
             
             <div className="absolute bottom-0 left-0 right-0 bg-black/50 text-white p-6 backdrop-blur-sm">
