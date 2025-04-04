@@ -2,9 +2,9 @@
 import { useState } from "react";
 import PackageFilters from "./PackageFilters";
 import PackagesGrid from "./PackagesGrid";
-import PackageSearch from "./PackageSearch";
 import PackagesCarousel from "./PackagesCarousel";
 import { filterPackages } from "../data/packagesData";
+import CommandSearch from "./CommandSearch";
 
 const Packages = () => {
   const [activeFilter, setActiveFilter] = useState<string>("all");
@@ -22,8 +22,6 @@ const Packages = () => {
           Discover our carefully crafted pilgrimage packages designed to provide an authentic 
           spiritual experience while ensuring comfort and peace of mind.
         </p>
-        
-        <PackageSearch />
         
         <div className="mb-12">
           <h3 className="text-2xl font-bold mb-6 border-l-4 border-secondary pl-4">

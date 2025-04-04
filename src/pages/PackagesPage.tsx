@@ -7,6 +7,7 @@ import PackageSearch from "../components/PackageSearch";
 import PackagesGrid from "../components/PackagesGrid";
 import { packagesData, filterPackages } from "../data/packagesData";
 import { PackageProps } from "../components/PackageCard";
+import CommandSearch from "../components/CommandSearch";
 
 const PackagesPage = () => {
   const [searchParams] = useSearchParams();
@@ -40,9 +41,9 @@ const PackagesPage = () => {
             transformative experience through Nepal's sacred sites.
           </p>
           
-          <PackageSearch />
+          <CommandSearch />
           
-          <div className="mb-8">
+          <div className="mt-8 mb-8">
             <h2 className="text-xl font-medium">
               {filteredPackages.length} {filteredPackages.length === 1 ? 'package' : 'packages'} found
               {searchParams.get("destination") && ` in ${searchParams.get("destination")}`}
