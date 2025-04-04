@@ -138,7 +138,7 @@ const CommandSearch = () => {
   return (
     <div className={cn(
       "w-full px-4 max-w-4xl mx-auto z-40", 
-      scrolled ? "sticky top-0 bg-white shadow-md py-3" : "py-6"
+      scrolled ? "sticky top-0 bg-white shadow-md py-3 bg-transparent shadow-none" : "py-6 bg-transparent shadow-none "
     )}>
       <div className="relative">
         <Popover open={open} onOpenChange={setOpen}>
