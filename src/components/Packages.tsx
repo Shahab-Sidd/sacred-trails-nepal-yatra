@@ -4,7 +4,6 @@ import PackageFilters from "./PackageFilters";
 import PackagesGrid from "./PackagesGrid";
 import PackagesCarousel from "./PackagesCarousel";
 import { filterPackages } from "../data/packagesData";
-import CommandSearch from "./CommandSearch";
 
 const Packages = () => {
   const [activeFilter, setActiveFilter] = useState<string>("all");

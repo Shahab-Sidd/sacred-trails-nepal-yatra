@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import PackageSearch from "../components/PackageSearch";
 import PackagesGrid from "../components/PackagesGrid";
 import { packagesData, filterPackages } from "../data/packagesData";
 import { PackageProps } from "../components/PackageCard";
@@ -30,8 +29,11 @@ const PackagesPage = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
+      <div className="sticky top-0 z-40 bg-white shadow-md">
+        <CommandSearch />
+      </div>
       
-      <section className="py-16 px-4 bg-gray-50 flex-1">
+      <section className="py-8 px-4 bg-gray-50 flex-1">
         <div className="container mx-auto">
           <h1 className="text-3xl md:text-4xl font-bold text-center mb-4">
             Our Sacred <span className="text-deep-blue">Journeys</span>
@@ -40,8 +42,6 @@ const PackagesPage = () => {
             Find the perfect spiritual journey that resonates with your soul and embark on a 
             transformative experience through Nepal's sacred sites.
           </p>
-          
-          <CommandSearch />
           
           <div className="mt-8 mb-8">
             <h2 className="text-xl font-medium">

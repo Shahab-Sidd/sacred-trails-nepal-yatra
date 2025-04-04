@@ -12,13 +12,19 @@ const Index = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
-      <Hero />
-      <CommandSearch />
-      <Packages />
-      <AboutUs />
-      <Contact />
-      <Footer />
-      <FloatingContact />
+      <div className="relative">
+        <Hero />
+        <div className="absolute left-0 right-0 bottom-0 transform translate-y-1/2">
+          <CommandSearch />
+        </div>
+      </div>
+      <div className="pt-16"> {/* Add padding to account for the search bar */}
+        <Packages />
+        <AboutUs />
+        <Contact />
+        <Footer />
+        <FloatingContact />
+      </div>
     </div>
   );
 };
