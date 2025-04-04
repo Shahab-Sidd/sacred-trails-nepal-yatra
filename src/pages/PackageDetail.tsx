@@ -7,6 +7,8 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { ArrowLeft, Calendar, Clock, MapPin, Phone, Users } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import PackageMap from "../components/PackageMap";
+import DayWiseItinerary from "../components/DayWiseItinerary";
 
 const PackageDetail = () => {
   const { id } = useParams<{ id: string }>();
@@ -54,12 +56,12 @@ const PackageDetail = () => {
     );
   }
 
-  // Generate sample images for the gallery
+  // Generate sample images for the gallery that match the destinations
   const galleryImages = [
     packageData.image,
-    "https://images.unsplash.com/photo-1509195070461-b120ba5f6b36?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-    "https://images.unsplash.com/photo-1530789253388-582c481c54b0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-    "https://images.unsplash.com/photo-1553856622-d1b352e9a211?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "https://images.unsplash.com/photo-1558799625-5ca4d941b5f9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80", // Kathmandu
+    "https://images.unsplash.com/photo-1554586916-7d702d6529ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80", // Pokhara
+    "https://images.unsplash.com/photo-1584378909319-db39924f3268?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80", // Muktinath
   ];
 
   return (
@@ -129,6 +131,14 @@ const PackageDetail = () => {
                 connection with the natural beauty and cultural traditions of Nepal.
               </p>
             </div>
+            
+            {/* Add the map component */}
+            <PackageMap destinations={packageData.destinations} />
+            
+            {/* Add the day-wise itinerary if available */}
+            {packageData.itinerary && 
+              <DayWiseItinerary itinerary={packageData.itinerary} />
+            }
             
             {/* Highlights */}
             <div className="mb-8">

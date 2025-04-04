@@ -3,6 +3,13 @@ import { useState } from "react";
 import { Phone } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
+export interface ItineraryDay {
+  day: number;
+  title: string;
+  description: string;
+  activities: string[];
+}
+
 export interface PackageProps {
   id: number;
   title: string;
@@ -12,6 +19,7 @@ export interface PackageProps {
   highlights: string[];
   inclusions: string[];
   exclusions: string[];
+  itinerary?: ItineraryDay[];
 }
 
 const PackageCard = ({
